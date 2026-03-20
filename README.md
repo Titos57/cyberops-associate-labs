@@ -35,3 +35,4 @@ Goal: Build foundational skills for a SOC Analyst internship.
 **LinkedIn:** [https://www.linkedin.com/in/cpanopoulos/](https://www.linkedin.com/in/cpanopoulos/).  
 **Email:** xristospanopoulos9@gmail.com 
 **GitHub:** [github.com/Titos57](https://github.com/Titos57)
+**HackTheBox** [https://profile.hackthebox.com/profile/019d0ced-6ed8-721f-b8fe-bf94f048faaa](https://profile.hackthebox.com/profile/019d0ced-6ed8-721f-b8fe-bf94f048faaa)
