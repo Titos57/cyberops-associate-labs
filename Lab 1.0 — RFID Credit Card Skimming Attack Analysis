@@ -1,0 +1,64 @@
+# Lab 1 - 
+**Course:** Cisco CyberOps Associate
+**Module:** 1.0.6 — Top Hacker Shows Us How It's Done
+**Date:** March 2026  
+**Author:** Christos Panopoulos
+
+---
+
+## Executive Summary
+In this lab, I analyze the credit card RFID skimming attack demonstrated by Pablos Holman in 
+his TEDxMidwest talk. The attack exploited a fundamental design flaw in the early release of
+RFID-enabled credit cards, also known as "contactless", that transmit unencrypted data to any
+nearby reader, allowing an attacker to capture sensitive data in a plaintext format, such 
+as the cardholder's name, card number, and expiration date. By using equipment under $50, an 
+attacker could silently intercept the data from the victim without making any physical contact. 
+While Modern contactless cards have addressed this issue by implementing advanced encryption  
+and tokenization, this attack remains a clear example of how convenience features can introduce 
+security vulnerabilities that affect millions of people, before the affected cards could be 
+recalled or replaced.
+
+---
+
+## Technical Analysis
+### The Vulnerability
+Radio Frequency Identification (RFID) is a technology that uses radio waves to wirelessly
+transfer data and identify objects at short range. AN RFID credit card consists of three 
+components: an RFID chip that electronically stores the cardholder's information, an antenna
+responsible for receiving radio signals, and the card body itself, which houses both components.
+
+In a transaction, a payment terminal initiates the exchange by emitting a radio signal that
+activates the chip in the card. The chip responds by transmitting the cardholder's information
+back to the terminal for the transaction to be completed. In the early stages of RFID, the
+cardholder's information was broadcast to the terminal in plaintext without an authentication 
+mechanism to verify the identity of the receiving device. Therefore, anyone with a reader, 
+legitimate or not, would receive the same information.
+
+### How the Attack Works
+The attack required minimal equipment, only a commercially available RFID reader, which at 
+the time cost under $50. With the reader, an attacker would have to place themselves within 
+a few centimeters away from their victim, usually in a crowded area where they would raise no
+suspicion. As the reader transmits radio signals to activate the chip, the attacker starts 
+receiving without any authorization, all the cardholder's information - name, card number, 
+and  expiration date - in plaintext.
+
+The entire interaction would only last milliseconds and required no physical contact with
+the victim. The victim had no way of knowing the information was transmitted, and the stolen
+data could be cloned onto a blank RFID card to be used for fraudulent purchases anywhere or
+even be sold on dark web marketplaces, further extending the attacker's profit.
+
+---
+
+## Impact Assessment
+At the individual level, a victim of RFID skimming will not only face a single fraudulent charge,
+but the unauthorized charges may go unnoticed for weeks, accumulating financial damage and 
+triggering lengthy processes with card issuers. In the case of cloned cards being sold on the
+dark web marketplace, victims may face repeated fraud charges over extended periods.
+
+The severity of this vulnerability has major consequences since the issue is embedded in the
+hardware that has been distributed to millions of people. Unlike a software vulnerability, which
+could be patched, in this case, all the distributed cards will have to be recalled or replaced
+with new ones. This is a prime example of why developing and implementing security should be 
+considered in the development of hardware and software.
+
+
