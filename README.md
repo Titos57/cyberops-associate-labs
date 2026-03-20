@@ -26,3 +26,12 @@ Goal: Build foundational skills for a SOC Analyst internship.
 - Critical infrastructure threat assessment
 - Professional security report writing
 - MITRE ATT&CK framework awareness
+
+---
+
+## Contact
+
+**Name:** Christos Panopoulos
+**LinkedIn:** [](https://www.linkedin.com/in/cpanopoulos/).  
+**Email:** xristospanopoulos9@gmail.com 
+**GitHub:** [github.com/Titos57](https://github.com/Titos57)
