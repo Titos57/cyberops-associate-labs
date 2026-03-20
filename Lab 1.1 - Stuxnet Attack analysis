@@ -7,4 +7,68 @@
 ---
 
 ## Executive Summary
-In this lab, I analyze the 
+In this lab, I analyze the Stuxnet attack, widely regarded as the first cyberweapon 
+ever deployed in warfare. Stuxnet is referred to as a virus, but in reality, it is a 
+computer worm that is believed to have been active since at least 2005 and targeted 
+the Natanz uranium enrichment facility. The worm exploited four zero-day
+vulnerabilities of Windows systems, and its main goal was to damage equipment,
+specifically the uranium enrichment centrifuges. Stuxnet remained undetectable for 
+five years, masking its actions by sending falsified sensor readings, until it was
+finally discovered in 2010 as the most sophisticated malware of its time. It is believed
+that the worm was a joint operation of the United States and Israel called Operation Olympic
+Games, although neither country has formally admitted responsibility.
+
+---
+
+## Technical Analysis
+### The Vulnerability
+Stuxnet was a sophisticated worm programmed that initially targeted Windows systems, by using
+four zero-day vulnerabilities - previously unknown flaws for which no patch existed 
+at the time of exploitation. The simultaneous use of four zero-day vulnerabilities points
+to nation-state resources, as it required a lot of research investment.
+
+The second phase of the worm's design was to target the Siemens Step7 software that was 
+used to control the speed of uranium enrichment centrifuge motors. Once the worm identified
+the Programmable Logic Controllers, it manipulated the centrifuge operating speeds beyond safe
+parameters to sabotage the equipment, while masking its actions by falsifying the sensor readings.
+The nuclear facility's network was considered air gapped, as it had no external communication with
+other networks, so the attackers used infected USB drives to infect the network.
+
+### How the Attack works
+The first layer of the attack was to infect the air-gapped network of the
+nuclear facility. This was done by someone who consciously or subconsciously added the
+malware physically, through an infected USB drive. Once inside, it started spreading
+across the Windows systems looking for its designated target.
+
+The worm was searching to activate its payload on a very specific PLC configuration, 
+remaining dormant on any other systems. Once it found the  Siemens Step7 software, 
+the second layer started. Centrifuges spin at speeds of approximately 1,000 Hz, creating a force 
+stronger than gravity to separate the uranium gas. The worm manipulated the centrifuge's operating
+speed, causing enough stress to damage it. For the worm to stay undetected, it 
+was waiting weeks to slow down the centrifuges after accelerating them temporarily, 
+making its presence hard to detect.
+
+### What an Attacker Gains
+The worm is calculated to have destroyed approximately 1,000 centrifuges and reduced the 
+operational capacity from 4,700 to 3,900, setting back the Iranian nuclear program by an 
+estimated minimum of two years. Stuxnet changed the view of many nations regarding 
+cyberweapons, as it proved the real-world physical destruction it can cause. Every 
+nation-state cyber program that exists today was shaped by what Stuxnet demonstrated was 
+possible.
+
+---
+
+##Impact Assessment
+The destruction of centrifuges in the Natanz facility was an operationally paralyzing situation 
+for the facility engineers, since they could not detect what was causing the damage. The world 
+watching a nuclear facility on an air-gapped network getting destroyed by a worm from the inside
+made governments and security agencies worldwide worry about the destruction it could cause 
+on any other critical government infrastructure, as Stuxnet demonstrated how a cyberweapon 
+can damage a nation's most secure systems and networks.
+
+--- 
+
+## References
+- [Stuxnet impact](https://www.malwarebytes.com/stuxnet)
+- [Stuxnet Attack stages](https://www.britannica.com/technology/Stuxnet)
+
