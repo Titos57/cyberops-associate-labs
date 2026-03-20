@@ -11,7 +11,9 @@ Goal: Build foundational skills for a SOC Analyst internship.
 ---
 
 ## Labs Completed
-
+| Module| Topics Covered                                                     |
+|-------| -------------------------------------------------------------------|
+|  1.0  | [RFID Credit Card Skimming Analysis](./module-1/1.0.6-top-hacker/) |
 
 
 
