@@ -11,11 +11,18 @@ Goal: Build foundational skills for a SOC Analyst internship.
 ---
 
 ## Labs Completed
-| Module| Topics Covered                                                     |
-|-------| -------------------------------------------------------------------|
-|  1.0  | [RFID Credit Card Skimming Analysis](./Lab%201.0%20—%20RFID%20Credit%20Card%20Skimming%20Attack%20Analysis) |
-|  1.1  | [Stuxnet Attack Analysis](./Lab%201.1%20-%20Stuxnet%20Attack%20analysis) |
+| Module| Lab  | Topics Covered                                                     | 
+|-------| ---- |--------------------------------------------------------------|
+|  1.0  | [RFID Credit Card Skimming Analysis](./Lab%201.0%20—%20RFID%20Credit%20Card%20Skimming%20Attack%20Analysis) | RFID vulnerabilities, hardware security, attack vectors |
+|  1.1  | [Stuxnet Attack Analysis](./Lab%201.1%20-%20Stuxnet%20Attack%20analysis) | Nation-state attacks, ICS/SCADA security, zero-day exploits |
 
 
 ## Skills Demonstrated
 - Threat actor analysis and profiling
+- Vulnerability research and documentation
+- Attack vector analysis (RFID, ICS/SCADA)
+- Industrial Control System (ICS) security concepts
+- Zero-day vulnerability analysis
+- Critical infrastructure threat assessment
+- Professional security report writing
+- MITRE ATT&CK framework awareness
