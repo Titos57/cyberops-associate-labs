@@ -61,4 +61,28 @@ could be patched, in this case, all the distributed cards will have to be recall
 with new ones. This is a prime example of why developing and implementing security should be 
 considered in the development of hardware and software.
 
+---
+
+## Mitigation & Recommendations
+As an individual, to prevent this attack, use security precautions such as
+RFID-blocking wallets and systematically monitoring bank accounts for any fraudulent activity,
+as those are the best practices to mitigate or even prevent this event.
+
+As for the industry, communicate the risks clearly to the public and implement a mandatory
+card replacement program. By implementing tokenization, authentication
+processes between the card and the terminal, and rolling cryptograms that render intercepted 
+data useless for future transactions, even if the data gets intercepted, it will be unusable.
+
+Designing hardware and software with security as the foundational requirement can rapidly
+change the occurrence of such vulnerabilities and prevent devastating events from happening
+in the first place. Adopting a proactive role in security rather than a reactive one is an extremely
+important lesson that everyone should aim for in the security field.
+
+---
+
+## References
+- [Top Hacker Shows Us How It's Done — Pablos Holman TEDxMidwest](https://www.youtube.com/watch?v=hqKafI7Amd8)
+- [How RFID Credit Cards Work — HowStuffWorks](https://www.rfidlabel.com/what-is-rfid-credit-card-security-and-how-does-it-work/)
+- [Tokenization in Payment Security — PCI Security Standards Council](https://listings.pcisecuritystandards.org/documents/Tokenization_Product_Security_Guidelines.pdf)
+
 
