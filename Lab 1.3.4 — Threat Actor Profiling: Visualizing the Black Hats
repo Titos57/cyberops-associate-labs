@@ -19,7 +19,7 @@ document, the exploit is triggered automatically without any user interaction.
 
 ## Scenario 2 - Cybercriminal/Ransomware Group.
 
-**Attacker:** Black cat, also known as ALPHV group.
+**Attacker:** Blackcat, also known as ALPHV group.
 **Associated Organization:** Ransomware-as-a-Service
 **Motive:** Financial gain and data extortion. In the Change Healthcare attack, UnitedHealth paid a $22 million ransom to recover encrypted systems and prevent further data exposure.
 **Attack Method:** BlackCat used compromised credentials to remotely access a Change Healthcare Citrix portal that was lacking multi-factor authentication. From there they mover laterally to access
