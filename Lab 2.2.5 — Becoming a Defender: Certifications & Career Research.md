@@ -30,14 +30,12 @@ is up to 120 minutes with a cost of $300. Prepares you for the job of a SOC anal
 **Certified Ethical Hacker (CEH)** covers identifying, scanning, and testing security system vulnerabilities. The certification process consists of 125 questions wit a 4-hour time limit and
 requires two years of work experience or completion of official EC-Council training, with the cost of $3,500. Prepares you for the job of an ethical hacker-Pentester professional.
 
-## Part 2 - 
+## Part 2 - Investigate positions available within cybersecurity
 
 ### Step 2a - Job Listings in the Last Two Weeks
-A search for SOC Analyst positions on Glassdoor within 
-Greece returned 6 new listings posted within the last 
-two weeks. The limited number of listings reflects the 
-relatively small size of the Greek cybersecurity job 
-market compared to larger European markets
+A search for SOC Analyst positions on Glassdoor within Greece returned 6 new listings posted within the last 
+two weeks. The limited number of listings reflects the relatively small size of the Greek cybersecurity job 
+market compared to larger European markets.
 
 ### Step 2b - Salary range
 The top 10 listings reviewed did not publicly disclose salary information, which is common practice in the 
@@ -47,7 +45,3 @@ Greek job market. Based on industry research, entry-level cybersecurity roles in
 ## Step 2c - Required qualifications
 They require 2+ years of experience in a SOC analyst role, a strong understanding of SIEM tools, excellent written and verbal communication in English with the team, relevant industry certifications like CISSP,
 C and Python development skills, and a bachelor's degree in a related field of CS or engineering.
-
----
-
-
