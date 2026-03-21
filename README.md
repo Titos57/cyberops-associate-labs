@@ -17,6 +17,8 @@ Goal: Build foundational skills for a SOC Analyst internship.
 |  1.1  | [Stuxnet Attack Analysis](./Lab%201.1%20-%20Stuxnet%20Attack%20analysis) | Nation-state attacks, ICS/SCADA security, zero-day exploits |
 |  1.2  | [IoT Smart City Infrastructure: Attack Analysis & Mitigation](./Lab%201.2%20-%20IoT%20Smart%20City%20Infrastructure%3A%20Attack%20Analysis%20%26%20Mitigation) | IoT vulnerabilities, smart city security, public infrastructure |
 | 1.3.4 | [Threat Actor Profiling — Visualizing the Black Hats](./Lab%201.3.4%20—%20Threat%20Actor%20Profiling%3A%20Visualizing%20the%20Black%20Hats) | Threat actor archetypes, nation-state attacks, ransomware, insider threats |
+| 2.2.5 | [Becoming a Defender — Certifications & Career Research](./Lab%202.2.5%20—%20Becoming%20a%20Defender:%20Certifications%20&%20Career%20Research.md) | Cybersecurity certifications, job market research, career pathways |
+
 
 ## Skills Demonstrated
 - Threat actor analysis and profiling (nation-state, cybercriminal, insider)
@@ -33,6 +35,9 @@ Goal: Build foundational skills for a SOC Analyst internship.
 - Ransomware attack analysis
 - Insider threat detection and mitigation
 - Corporate espionage case analysis
+- Cybersecurity certification landscape research
+- Job market analysis
+- Career pathway planning in cybersecurity
   
 ---
 
