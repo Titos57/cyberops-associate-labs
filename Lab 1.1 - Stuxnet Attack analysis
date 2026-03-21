@@ -58,7 +58,7 @@ possible.
 
 ---
 
-##Impact Assessment
+## Impact Assessment
 The destruction of centrifuges in the Natanz facility was an operationally paralyzing situation 
 for the facility engineers, since they could not detect what was causing the damage. The world 
 watching a nuclear facility on an air-gapped network getting destroyed by a worm from the inside
@@ -68,7 +68,18 @@ can damage a nation's most secure systems and networks.
 
 --- 
 
+## Mitigation & Recommendations
+After the attack of Stuxnet, organizations are encouraged to disable USB drives, as Stuxnet
+and other malware take advantage of them to spread. Separating the ICS network from the rest
+of the network and covering it with firewalls and network segmentation are recommended security 
+measures to protect the key infrastructure from such attacks.
+While Stuxnet is inspiring attackers to start creating new-generation malware toolkits like 
+PIPEDREAM and CosmicEnergy, based on the publicly available Stuxnet documents, the governments
+respond by creating defensive frameworks like CISA ICS guidelines.
+
+---
+
 ## References
 - [Stuxnet impact](https://www.malwarebytes.com/stuxnet)
 - [Stuxnet Attack stages](https://www.britannica.com/technology/Stuxnet)
-
+- [Stuxnet Attack in great Detail](https://www2.cs.arizona.edu/~collberg/Teaching/466-566/2012/Resources/presentations/topic9-final/report.pdf)
