@@ -1,0 +1,113 @@
+# Lab 1 - RFID Credit Card Analysis
+**Course:** Cisco CyberOps Associate
+**Module:** 1.2.3 — Learning the Details of Attacks
+**Date:** March 2026  
+**Author:** Christos Panopoulos
+
+---
+
+## Executive Summary
+In this lab, I analyze the cybersecurity dangers of implementing
+IoT devices in cities and transportation, as smart cities require
+thousands to millions of connected devices to operate, creating an
+attack surface for cybercriminals. The most recent example
+of a cyberattack on a smart city was back in June 2023, in the city
+of Olsztyn, Poland, a cyberattack paralyzed its transportation
+infrastructure, by hitting at least a hundred intersections in the 
+city centre, causing accidents, traffic jams, and public disruption. 
+While implementing technology in cities can provide quality of life 
+improvements to the residents, it can also cause major disruption as 
+emergency, security alert systems, street video surveillance, and smart
+traffic lights are among the most vulnerable to cyberattacks.
+
+---
+
+## Technical Analysis
+### The Vulnerability
+Smart traffic systems use video detection, IoT sensors, AI, and cloud 
+computing to monitor and improve traffic flow. While having adaptive traffic
+management systems that can adjust the flow of traffic can improve safety,
+they can also offer an attack surface for cyberattacks.
+
+Due to the extended attack surface a smart city provides to an attacker from the
+thousands of connected devices, one unpatched device can open the door to an attacker
+for the entire system. Many traffic light systems follow weak security practices, such as
+default manufacturer credentials that are never changed, lack of encryption for firmware 
+or communication channels, and lack of authentication mechanisms for the data they receive from 
+their sensors, giving a threat actor, the opportunity to push a malware firmware update 
+to gain control over the device.
+
+### How the Attack Works
+The attacker managed to access the system either by exploiting weak credentials or by 
+leveraging unpatched software versions. By gaining access to one unpatched device, they 
+likely entered the entire transit system.
+
+The attack took place at the city of Olsztyn, Poland, in June of 2023, when it suffered 
+from a cyberattack that disrupted the city's transit system. It targeted 92 intersections
+disrupting traffic lights and the metropolitan ticket sales system, forcing transit authorities
+to shut down the servers for several weeks, making the intersections and the metropolitan 
+ticket system non-operational during that period.
+
+### What the Attacker Gained
+The attack successfully forced transit authorities to shut down the system, while
+the authorities worked to identify and contain the vulnerability. With the metropolitan ticket system 
+offline, the city faced significant financial losses, while demonstrating how an attacker can hold
+an entire city center hostage, and without access to critical infrastructure for several weeks.
+
+Beyond the immediate damage, the attack demonstrated that a single entry point in a poorly 
+secured IoT network can render an entire city centre without access to critical infrastructure 
+for weeks. Smart city systems can be targeted by ransomware groups and hacktivists that seek
+to cause public disruption with the least amount of technical investment.
+
+---
+
+## Impact Assessment
+Cyberattacks in smart cities can endanger public safety, as disrupted traffic lights
+are not just an inconvenience, but intersection failures and emergency vehicles delays
+can have life-threatening consequences.
+
+This attack on Olsztyn, Poland, is likely only one of the many smart cities that
+use the same vulnerable equipment. As smart cities grow in numbers, so will the 
+destructive cyberattacks against them. A simple security mistake, like using 
+default or weak credentials and delayed software patching, can disrupt
+an entire city for weeks, even costing human lives.
+
+---
+
+## Mitigation & Recommendations
+Individually, the city authorities should force the mandatory replacement of 
+default credentials with strong credential policies on all deployed devices
+on the network, alongside regularly scheduled patch management, and introducing network 
+segmentation to limit lateral movement in the event of a breach.
+
+As an industry providing IoT services, and especially in the public sectors
+where government departments are in charge of them and not security 
+professionals, implementing strong security fundamentals, like 
+encryption, firmware updates and no default credentials can limit the 
+attack surface for an attacker.
+
+Maintaining and securing infrastructure only after a cyberattack has 
+occurred is a reactive stance that will never be sufficient. Security 
+must be enforced at the manufacturing stage, before systems reach deployment.
+The EU Cyber Resilience Act, passed in 2024, now requires manufacturers to 
+follow security standards before ever selling into the EU market.
+
+---
+
+## References
+
+- [Smart traffic light system design](https://miovision.com/blog/what-is-smart-traffic-management/).
+- [Cyberattack Poland June 2023 incident](https://www.stormshield.com/news/overview-of-cyberattacks-on-connected-cities/).
+- [Vulnerabilities on smart traffic light systems](https://asimily.com/blog/safeguarding-smart-traffic-lights-smart-cities/#:~:text=Lack%20of%20Encryption,identifying%20200%2C000%20vulnerable%20wireless%20sensors.).
+
+
+
+
+
+
+
+
+
+
+
+
