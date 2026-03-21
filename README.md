@@ -16,9 +16,10 @@ Goal: Build foundational skills for a SOC Analyst internship.
 |  1.0  | [RFID Credit Card Skimming Analysis](./Lab%201.0%20—%20RFID%20Credit%20Card%20Skimming%20Attack%20Analysis) | RFID vulnerabilities, hardware security, attack vectors |
 |  1.1  | [Stuxnet Attack Analysis](./Lab%201.1%20-%20Stuxnet%20Attack%20analysis) | Nation-state attacks, ICS/SCADA security, zero-day exploits |
 |  1.2  | [IoT Smart City Infrastructure: Attack Analysis & Mitigation](./Lab%201.2%20-%20IoT%20Smart%20City%20Infrastructure%3A%20Attack%20Analysis%20%26%20Mitigation) | IoT vulnerabilities, smart city security, public infrastructure |
+| 1.3.4 | [Threat Actor Profiling — Visualizing the Black Hats](./Lab%201.3.4%20—%20Threat%20Actor%20Profiling%3A%20Visualizing%20the%20Black%20Hats) | Threat actor archetypes, nation-state attacks, ransomware, insider threats |
 
 ## Skills Demonstrated
-- Threat actor analysis and profiling
+- Threat actor analysis and profiling (nation-state, cybercriminal, insider)
 - Vulnerability research and documentation
 - Attack vector analysis (RFID, ICS/SCADA)
 - Industrial Control System (ICS) security concepts
@@ -29,6 +30,9 @@ Goal: Build foundational skills for a SOC Analyst internship.
 - IoT security analysis
 - Smart city infrastructure vulnerability assessment
 - Public sector cybersecurity risk evaluation
+- Ransomware attack analysis
+- Insider threat detection and mitigation
+- Corporate espionage case analysis
   
 ---
 
