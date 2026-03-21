@@ -1,0 +1,44 @@
+# Lab 1.3 - Threat Actor Profiling: Visualizing the Black Hats
+**Course:** Cisco CyberOps Associate
+**Module:** 1.3.4 - Visualizing the Black Hats
+**Date:** March 2026  
+**Author:** Christos Panopoulos
+
+---
+
+## Scenario 1 — Nation-State Actor
+
+**Attacker:** A widely-known Russian threat group called APT28 or Fancy Bear.
+**Associated Organization:** GRU - Russian military intelligence.
+**Motive:** Collecting military and diplomatic intelligence from maritime and transport organizations of EU countries.
+**Attack Method:** The attackers used spear-phishing documents containing a newly disclosed Microsoft Office vulnerability exploited
+within 24 hours of its publication, called CVE-2026-21509, which bypasses its secure features. When the victims open the malicious
+document, the exploit is triggered automatically without any user interaction.
+**Target & Vulnerability:** European military and government entities, specifically targeting maritime and transport organizations across Poland, Slovenia, Turkey, Greece, the UAE, and Ukraine.
+**Mitigation:** Immediate patching of CVE-2026-21509, multi-factor authentication, email security filtering, and employee training for spear-phishing attacks.
+
+## Scenario 2 - Cybercriminal/Ransomware Group.
+
+**Attacker:** Black cat, also known as ALPHV group.
+**Associated Organization:** Ransomware-as-a-Service
+**Motive:** Financial gain and data extortion. In the Change Healthcare attack, UnitedHealth paid a $22 million ransom to recover encrypted systems and prevent further data exposure.
+**Attack Method:** BlackCat used compromised credentials to remotely access a Change Healthcare Citrix portal that was lacking multi-factor authentication. From there they mover laterally to access
+the rest of the network and find sensitive data, until on February 2024, they encrypted the whole network.
+**Target & Vulnerability:** The Database of Change Healthcare was the target, compromising the personal information of 100 million individuals, remotely with the use of compromised credentials.
+The critical vulnerability was the absence of multi-factor authentication on an externally accessible remote access portal, allowing stolen credentials to provide immediate full access to the network.
+**Mitigation:** Mandatory multi-factor authentication to all remotely accesible portals, credential monitoring to detect any compromises and network segmentation to prevent lateral movement.
+
+## Scenario 3 - Insider Threat
+
+**Attacker:** Linwei Ding, a Google software engineer
+**Associated Organization:** Acted independently but allegedly sought to benefit Chinese AI companies.
+**Motive:** Financial gain and career advancement through corporate espionage.
+**Attack Method:** Used his insider access to upload stored information to his personal account related to the infrastructure of Google's proprietary AI chip designs and
+supercomputing data center architecture — over ten years of research and development.
+**Target & Vulnerability:** The vulnerability is over-privileged access combined with insufficient behavioral monitoring.
+**Mitigation:** Least privilege access, regular access audits, and User behavior analytics.
+
+## References
+- [APT28, threat group that launched a sophisticated espionage campaign in early 2026](https://www.trellix.com/blogs/research/apt28-stealthy-campaign-leveraging-cve-2026-21509-cloud-c2/)
+- [Analysis of the Change Healthcare ransomware attack](https://www.picussecurity.com/resource/blog/alphv-ransomware)
+- [Ex-Google Engineer charged with stealing secrets](https://www.bbc.com/news/world-us-canada-68497508)
