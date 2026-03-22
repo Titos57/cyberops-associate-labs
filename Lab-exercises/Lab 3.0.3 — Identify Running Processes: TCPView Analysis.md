@@ -24,7 +24,7 @@ commonly deploy malware using a similar filename — replacing the
 lowercase 'l' with an uppercase 'I' to disguise the malware as a 
 legitimate Windows process.
 
-![lsass.exe properties](../Lab-screenshots/TCPView/issas_exe.jpg)
+![lsass.exe properties](../Lab-screenshots/TCPViewer/issas.exe.jpg)
 
 ### Other Processes
 **services.exe** — Services and Controller app, located at 
