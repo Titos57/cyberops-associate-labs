@@ -1,6 +1,6 @@
-# Lab 1.2 — Becoming a Defender: Certifications & Career Research
+# Lab 1.3 — Becoming a Defender: Certifications & Career Research
 **Course:** Cisco CyberOps Associate 
-**Module:** 1.2.5 - Becoming a Defender
+**Module:** 1.3.4 - Becoming a Defender
 **Date:** March 2026  
 **Author:** Christos Panopoulos
 
