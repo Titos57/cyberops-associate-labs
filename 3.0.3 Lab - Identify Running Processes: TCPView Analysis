@@ -1,0 +1,19 @@
+# Lab 3.0 - Identify Running Processes: TCPView Analysis
+**Course:** Cisco CyberOps Associate
+**Module:** 3.0.3 - Identify Running Processes
+**Date:** March 2026  
+**Author:** Christos Panopoulos
+
+---
+
+## Objective
+Use TCPView to identify and analyze running processes and network 
+connections on a Windows system.
+
+---
+
+## Part 3 — Windows System Processes
+
+**lsass.exe** (Local Security Authentication Process) is located
+at C:
+
