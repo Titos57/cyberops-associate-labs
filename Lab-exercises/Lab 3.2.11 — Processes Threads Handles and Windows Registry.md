@@ -1,5 +1,4 @@
-# Lab 3.2.11 — Exploring Processes, Threads, Handles, 
-and Windows Registry
+# Lab 3.2.11 — Exploring Processes, Threads, Handles, and Windows Registry
 
 **Course:** Cisco CyberOps Associate
 **Module:** 3.2.11
