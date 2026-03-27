@@ -111,7 +111,7 @@ store their configuration data as keys in the registry rather than in separate c
 ### Registry Value Modification
 Double-clicking the EulaAccepted Key offers the option to modify the registry key and change its value to 0 -
 meaning the agreement is no longer accepter from the user. Now, upon reopening Process Explorer, the agreement
-will be shown again - demonstrating how a single registry value can affect the controls of an application.
+will be shown again - demonstrating how a single registry value can affect the behavior of an application.
 
 ![Registry value change](../Lab-screenshots/procexp.exe/Eula%20value%20to%200.jpg)
 ![Agreement Reappeared](../Lab-screenshots/procexp.exe/Agreement.jpg)
