@@ -119,7 +119,11 @@ will be shown again - demonstrating how a single registry value can affect the b
 ---
 
 ## Key Observations
-
+After completing the lab and experimenting with Process Explorer, I was surprised by the number of references
+and key values each small process can require to run properly. Seeing how the Windows Registry interacts with
+each application raises major security concerns about how an attacker can disturb every application by simply
+accessing the Windows Registry, for that reason, it is important to always apply least privilege policies to
+the devices.
 
 
 
