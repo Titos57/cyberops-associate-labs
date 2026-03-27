@@ -75,6 +75,48 @@ terminated, showing the hierarchical nature of Windows process management.
 ## Part 2 - Threads & Handles
 
 ### Part 2.1 - Threads
+Selecting the conhost.exe process and opening Properties, we access everything there is to know
+about the conhost.exe. Specifically, we check the thread tab, where we can see the five
+threads that conhost.exe is running simultaneously. Each thread displayed 
+its Thread ID, CPU usage, Cycles Delta, Suspend Count, and Start Address, indicating which
+module spawned it. By clicking on any thread, even more detailed information appears for the
+selected thread, like the state, which in our case is "Wait:UserInput" - meaning it is idle 
+and waiting for the user to input a command.
+
+![Thread Tab](../Lab-screenshots/procexp.exe/conhost.exe%20threads.jpg)
+
+### Part 2.2 - Handles
+For a user to show the handles of a process, the Lower Panel View needs to be toggled at the top
+of the tab. Once it is enabled, we can select any process from the list and check its handles.
+In this case, we check conhost.exe handles, which reveal multiple references
+across the system's resources, including files, keys, directories, and kernel events. File handles
+point to Windows core system files, and key handles refer to entries on the Windows Registry.
+This demonstrates that even a small console process like conhost.exe maintains a wide range
+of references to system resources simultaneously.
+
+![Handles View](../Lab-screenshots/procexp.exe/handles_conhost.exe.jpg)
+
+## Part 3 - Windows Registry
+
+### EulaAccepted Key — Initial Value
+The Windows Registry Viewer was opened and navigated to HKEY_CURRENT_USER->SOFTWARE->Sysinternals->
+Process Explorer.
+Scrolling down the list of values, we locate EulaAccepted Key with a value of 0x00000001 (1), confirming 
+that the End User Agreement for Process Explorer has been accepted. The Windows Registry stores 
+numerous other configuration keys stored for Process Explorer, demonstrating how Windows applications
+store their configuration data as keys in the registry rather than in separate configuration files.
+
+![Windows Registry Eula Key Accepted](../Lab-screenshots/procexp.exe/Windows%20Registry%20EulaAccepted%20key.jpg)
+
+### Registry Value Modification
+Double-clicking the EulaAccepted Key offers the option to modify the registry key and change its value to 0 -
+meaning the agreement is no longer accepter from the user. Now, upon reopening Process Explorer, the agreement
+will be shown again - demonstrating how a single registry value can affect the controls of an application.
+
+![Registry value change](../Lab-screenshots/procexp.exe/Eula%20value%20to%200.jpg)
+![Agreement Reappeared](../Lab-screenshots/procexp.exe/Agreement.jpg)
+
+
 
 
 
