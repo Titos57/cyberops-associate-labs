@@ -116,7 +116,9 @@ will be shown again - demonstrating how a single registry value can affect the b
 ![Registry value change](../Lab-screenshots/procexp.exe/Eula%20value%20to%200.jpg)
 ![Agreement Reappeared](../Lab-screenshots/procexp.exe/Agreement.jpg)
 
+---
 
+## Key Observations
 
 
 
