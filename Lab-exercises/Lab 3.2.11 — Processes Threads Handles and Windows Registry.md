@@ -25,6 +25,6 @@ chrome.exe, and all of the child processes below. A lot of processes are running
 simultaneously, this is because of Chrome's multi-process architecture, where every tab, extension
 and plugin run as a separate process for security reasons.
 
-![Active Process Identification](../Lab-screenshots
+![Active Process Identification](../Lab-screenshots/procexp.exe/Find_process_window.jpg)
 
 
