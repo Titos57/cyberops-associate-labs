@@ -20,6 +20,8 @@ Goal: Build foundational skills for a SOC Analyst internship.
 | 2.2.5 | [Becoming a Defender — Certifications & Career Research](./Lab-exercises/Lab%202.2.5%20—%20Becoming%20a%20Defender%3A%20Certifications%20%26%20Career%20Research.md) | Cybersecurity certifications, job market research, career pathways |
 | 3.0.3 | [Identify Running Processes: TCPView Analysis](./Lab-exercises/Lab%203.0.3%20—%20Identify%20Running%20Processes%3A%20TCPView%20Analysis.md) | TCPView, process monitoring, network analysis |
 | 3.2.11 | [Processes Threads Handles and Windows Registry](./Lab-exercises/Lab%203.2.11%20—%20Processes%20Threads%20Handles%20and%20Windows%20Registry.md) | Procexp, Windows Registry, process exploring, handle and thread analysis, registry modification |
+| 4.2.6 | [Working with Text Files in the CLI](./Lab-exercises/Lab%204.2.6%20—%20Working%20with%20Text%20Files%20in%20the%20CLI.md) | Linux CLI, text editors, configuration files, nginx, bash |
+
 ## Skills Demonstrated
 - Threat actor analysis and profiling (nation-state, cybercriminal, insider)
 - Vulnerability research and documentation
