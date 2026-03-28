@@ -21,7 +21,7 @@ Opening the SciTE text editor can be done by typing `scite` on the terminal of t
 By adding the text required, we go to File > Save to give a name and save our text for future
 usage.
 
-![SciTE text file](../
+![SciTE text file](../Lab-screenshots/Text%20Files%20Terminal/nano%20space.txt.png)
 
 ### Finding Hidden Files
 When trying to open a file with Scite, and it doesn´t show up, changing the dropdown area to 
@@ -46,7 +46,7 @@ when using nano, including shortcuts such CTRL+X to exit, CTRL+O to save, and CT
 When lines extend beyond the visible screen boundary in nano, a `>` character can be seen
 at the end of the line.
 
-![nano text editor](../
+![SciTE text file](../Lab-screenshots/Text%20Files%20Terminal/nano%20space.txt.png)
 
 ---
 
@@ -68,7 +68,8 @@ view. By editing the file by either scite or nano and changing the line PS1='\[\
 from 32 to 31, turns the terminal name color from green to red. Changes to the configuration
 files usually do not take effect until the session is refreshed.
 
-![Red name text](../
+![nano text editor](../Lab-screenshots/Text%20Files%20Terminal/changes%20to%20red.png)
+![terminal changed to red](../Lab-screenshots/Text%20Files%20Terminal/red%20name%20terminal.png)
 
 ### Step 3 — Editing nginx Configuration
 Now moving to the /etc directory and modifying a service like nginx. The nginx web server 
@@ -80,6 +81,8 @@ to /usr/share/nginx/html/text_ed_lab/.
 After saving the configuration and starting nginx with the modified file, navigating to
 127.0.0.1:8080 in Firefox successfully loaded the lab confirmation page, verifying 
 that the configuration changes took effect immediately.
+
+![Website connection](../Lab-screenshots/Text%20Files%20Terminal/website.png)
 
 ---
 
