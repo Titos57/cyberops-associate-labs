@@ -27,7 +27,7 @@ those of a standard user, if the symbol is #, this indicates we are connected as
 ---
 
 ### Step 2: Display Manual Pages
-It is critical to know the way to find more information about a command. By using the "man" command
+It is critical to know the way to find more information about a command. By using the 'man' command
 and the specific command for which more information is required, a user can find out the description,
 synopsis, examples, overview, defaults, and options for the specific command.
 
@@ -42,18 +42,75 @@ is key for a SOC analyst.
 ---
 
 ### Step 3: Create and Change Directories
+Creating directories in a Linux environment can be done by using the `mkdir` command
+and specifying the name of the directory a user wants to create. The directory will be created in
+the current directory that the user is in, which can be found with the `pwd` command.
 
-
+Changing between directories can be done with `cd` and the specific directory or path the user
+wants to move to. The user can see the available directories that they can change with either
+`ls -l` command or `ls -la`, which also displays the hidden directories with the dot(.) in 
+front. With `cd`, a user can move to the home directory by typing `cd ~` or move a directory
+back with `cd ..`. Navigation as a SOC analyst in a Linux environment is the most crucial 
+skill for any investigation.
 
 ---
 
 ### Step 4: Redirect Outputs
-
-
+Redirecting output from run commands can be a great way of saving the results into a text file 
+helping an analyst come back to review in a later stage of an investigation. This can be done 
+by using the `>` symbol, which creates or overwrites the specified file. For example, 
+man ls > some_text.txt will redirect the results of the man command from the terminal to the 
+file some_text.txt; if the file some_text.txt doesn´t exist, it will be created
+or if it does, everything in it will be overwritten by the new text without any warning.
 
 ---
 
 ### Step 5: Redirect and Append to a Text File
+The `>>` symbol in comparison to `>`, redirects and appends to the existing file. A text
+file will not be overwritten when using `>>` as it will append to the file the new redirected
+text, as seen when run with the cat command, which prints the contents of a file. Such 
+redirection is used for logs that need to contain both past and present information, where
+using `>` will overwrite all the past text that was logged, losing crucial evidence for
+an investigation.
+
+---
+
+### Step 6: Work with Hidden Files
+Checking the amount of directories on the home directory reveals 40 directories. By 
+using the command `ls -la`, a wider range of 136 files is revealed, those files are called the
+hidden directories. Most of the hidden files contain configuration settings on how a
+specific user's application will work, such as .bashrc, .profile, or even the history of commands
+run in a user's terminal, .bash_history.
+
+![ls -la output](../
+
+---
+
+## Part 2: Copying, Deleting, and Moving Files
+
+### Step 1: Copying Files
+
+
+![cp command and verification](../
+
+---
+
+### Step 2: Deleting Files and Directories
+
+
+![rm and rm -r output](../
+
+---
+
+### Step 3: Moving Files and Directories
+
+
+
+
+
+
+
+
 
 
 ---
