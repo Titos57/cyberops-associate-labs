@@ -3,15 +3,15 @@
 **Course:** Cisco CyberOps Associate  
 **Category:** Practical / Hands-On  
 **Platform:** CyberOps Workstation Virtual Machine (Linux)  
-**Date Completed:** [DATE]
+**Date Completed:** April 2026
 
 ---
 
 ## Objective
 In this lab, the goal is to develop proficiency with the command line and learn 
-basic and important terminal commands, such as man, pwd, cd, cp, mv, and rm, as
-well as output redirection >, >> that every Linux user, and especially a SOC analyst or 
-a penetration tester should know to enumerate through system files while investigating.
+basic and important terminal commands, such as `man`, `pwd`, `cd`, `cp`, `mv`, and `rm`, as
+well as output redirection `>`, `>>` that every Linux user, and especially a SOC analyst or 
+a penetration tester should know how to enumerate through system files while investigating.
 
 ---
 
@@ -20,24 +20,25 @@ a penetration tester should know to enumerate through system files while investi
 ### Step 1: Access the Command Line
 When launching the terminal by clicking the terminal window on the dock, critical information is
 displayed - the user´s name and the machine name are shown, as well as the specific directory 
-the terminal is accessing, and a symbol $, which indicates the user´s privileges in that case
-those of a standard user, if the symbol is #, this indicates we are connected as root or superuser.
+the terminal is accessing, and a symbol `$`, which indicates the user´s privileges in that case
+those of a standard user, if the symbol is `#`, this indicates we are connected as root or superuser.
 
-![Terminal Window of analyst](../
+![Terminal Window of analyst](../Lab-screenshots/Linux%20Commands/terminal.png)
+
 ---
 
 ### Step 2: Display Manual Pages
-It is critical to know the way to find more information about a command. By using the 'man' command
+It is critical to know the way to find more information about a command. By using the `man` command
 and the specific command for which more information is required, a user can find out the description,
 synopsis, examples, overview, defaults, and options for the specific command.
 
 Using the man command, an analyst can retrieve information about critical commands like,
-the pwd command, which is responsible for printing the working directory, and the cp command
+the `pwd` command, which is responsible for printing the working directory, and the `cp` command
 which is used to copy files and directories to other locations on the machine. Having knowledge
 about the man command to find information about any command you encounter during an investigation
 is key for a SOC analyst.
 
-![Information about the cp command](../
+![Information about the cp command](../Lab-screenshots/Linux%20Commands/man%20cp.png)
 
 ---
 
@@ -53,6 +54,9 @@ front. With `cd`, a user can move to the home directory by typing `cd ~` or move
 back with `cd ..`. Navigation as a SOC analyst in a Linux environment is the most crucial 
 skill for any investigation.
 
+![ls command run](../Lab-screenshots/Linux%20Commands/ls%20command.png)
+![ls -la command run](../Lab-screenshots/Linux%20Commands/ls%20-la%20command.png)
+
 ---
 
 ### Step 4: Redirect Outputs
@@ -62,6 +66,8 @@ by using the `>` symbol, which creates or overwrites the specified file. For exa
 man ls > some_text.txt will redirect the results of the man command from the terminal to the 
 file some_text.txt; if the file some_text.txt doesn´t exist, it will be created
 or if it does, everything in it will be overwritten by the new text without any warning.
+
+![redirecting an echo command](../Lab-screenshots/Linux%20Commands/Redirect.png)
 
 ---
 
@@ -73,6 +79,8 @@ redirection is used for logs that need to contain both past and present informat
 using `>` will overwrite all the past text that was logged, losing crucial evidence for
 an investigation.
 
+![appending to a file](../Lab-screenshots/Linux%20Commands/Appending.png)
+
 ---
 
 ### Step 6: Work with Hidden Files
@@ -82,7 +90,8 @@ hidden directories. Most of the hidden files contain configuration settings on h
 specific user's application will work, such as .bashrc, .profile, or even the history of commands
 run in a user's terminal, .bash_history.
 
-![ls -la output](../
+![ls -l output](../Lab-screenshots/Linux%20Commands/ls%20-%20l%20output.png)
+![ls -la output](../Lab-screenshots/Linux%20Commands/ls%20-la%20output.png)
 
 ---
 
@@ -97,7 +106,7 @@ places it in the destination, leaving the original file intact. In a SOC analyst
 investigation, the analyst would always work with a copied file to preserve the integrity
 of the evidence.
 
-![cp command and verification](../
+![cp command and verification](../Lab-screenshots/Linux%20Commands/cp%20command.png)
 
 ---
 
@@ -111,8 +120,6 @@ Using commands in Linux like `rm` is permanent and cannot be undone, so a user
 needs to be aware and careful while using them. Commands like `rm -r` are also used
 by malware to delete any traces of its actions.
 
-![rm and rm -r output](../
-
 ---
 
 ### Step 3: Moving Files and Directories
@@ -123,7 +130,7 @@ is different from the `cp` command, as it moves the file by removing it from its
 location and placing it in the new location. Attackers may use the `mv` command to move
 malware around a machine to avoid detection.
 
-![Moving file to current directory](../
+![Moving file to current directory](../Lab-screenshots/Linux%20Commands/mv%20command.png)
 
 ---
 
