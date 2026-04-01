@@ -89,28 +89,48 @@ run in a user's terminal, .bash_history.
 ## Part 2: Copying, Deleting, and Moving Files
 
 ### Step 1: Copying Files
-
+Copying files in a Linux distribution can be done with the `cp` command. The `cp` command
+is used by specifying the source (file to copy) and the destination (where the copied
+file will be placed). In contrast to the `mv` command, where you move a source from
+one location to another, the `cp` command creates a copy of the original file and 
+places it in the destination, leaving the original file intact. In a SOC analyst
+investigation, the analyst would always work with a copied file to preserve the integrity
+of the evidence.
 
 ![cp command and verification](../
 
 ---
 
 ### Step 2: Deleting Files and Directories
+Removing files and directories in a Linux environment is done by the `rm` command.
+The `rm` command deletes the file or directory specified by the user. Deleting a 
+directory requires the `rm -r` command, which is necessary, as `-r` specifies to the terminal
+to delete everything inside the directory.
 
+Using commands in Linux like `rm` is permanent and cannot be undone, so a user
+needs to be aware and careful while using them. Commands like `rm -r` are also used
+by malware to delete any traces of its actions.
 
 ![rm and rm -r output](../
 
 ---
 
 ### Step 3: Moving Files and Directories
+Moving files is done by the `mv` command. Using the `mv` command, a user needs
+to specify the source and the destination, if a user wants a file to be moved in 
+its current directory, the `.` symbol can be used at the destination. The `mv` command
+is different from the `cp` command, as it moves the file by removing it from its original
+location and placing it in the new location. Attackers may use the `mv` command to move
+malware around a machine to avoid detection.
 
-
-
-
-
-
-
-
-
+![Moving file to current directory](../
 
 ---
+
+## Key Observations
+As a professional in the field of security, having Linux CLI proficiency is an essential competancy.
+Using commands like `rm`, `mv`, `>>`, and `ls` is necessary to navigate through Linux
+and conduct any investigation as a SOC analyst. In a real-world breach scenario, an analyst
+would use the `ls -la` command to uncover hidden malware traces, `>>` to build investigation logs, and
+`.bash_history` hidden file to reconstruct the attacker's actions during the breach.
+
