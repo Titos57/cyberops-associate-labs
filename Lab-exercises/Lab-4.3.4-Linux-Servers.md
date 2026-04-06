@@ -79,14 +79,31 @@ requests with lower privileges for security purposes.
 ## Part 2: Using Telnet to Test TCP Services
 
 ### Step 2a — Telnet to Port 80 (nginx)
+Telnet is a tool that lets you connect to any open TCP port and communicate with 
+the service running there. Telnet is insecure as it transmits information as plain
+text, making it easy for anyone monitoring the network to intercept and read the 
+entire session.
 
+When attempting to communicate via telnet and sending unrecognized input, telnet
+displays a 400 HTTP error code, meaning it is connected to a real web server and 
+also displaying as plain text the server's version, which an attacker can use to
+search for CVE known vulnerabilities for the specific server version. Trying to 
+locate service information and version as an attacker is called banner grabbing.
 
 ![telnet port 80 output](../
 
 ---
 
 ### Step 2b — Telnet to Port 22 (SSH)
+When connecting to port 22 via telnet, it will immediately display
+a banner with the protocol version, the software, and the software's
+exact version. By sending invalid input to SSH, and not a proper SSH handshake response
+the connection gets terminated, and an error gets displayed.
 
+Similar to nginx response, SSH offers the attacker valuable information that can 
+be used to find a CVE vulnerability for the SSH version or software version. SSH should
+replace telnet as it encrypts the data transmitted through a network compared to the plain
+text format that telnet implements.
 
 
 ![telnet port 22 output](../
@@ -94,7 +111,11 @@ requests with lower privileges for security purposes.
 ---
 
 ### Step 2c — Telnet to Port 68
-
+While attempting to connect to port 68 via telnet, the connection is 
+refused. Port 68 is using the UDP protocol, and telnet can only connect to open TCP 
+ports, so the connection is not successful. Telnet is a limited tool that can only
+be proven effective when used against TCP ports. An analyst should know which tools
+to use based on the protocol: telnet for TCP ports and netcat for UDP ports.
 
 
 ![telnet port 68 output](../
@@ -102,6 +123,30 @@ requests with lower privileges for security purposes.
 ---
 
 ## Key Observations
+As an analyst, to properly use commands like `ps`, `netstat -tunap`, and `telnet`
+to identify and connect to processes and services, can form a core investigative
+methodology for identifying malicious processes on a machine, like discovering an 
+unknown service running on port 4444, usually used by Metasploit reverse shell. 
+The ability of the telnet tool to offer attackers version information via banner
+grabbing, which can be used to research known CVE vulnerabilities, is a critical 
+security risk.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 [3-4 sentences connecting the lab to real SOC 
 analyst or penetration tester work]
