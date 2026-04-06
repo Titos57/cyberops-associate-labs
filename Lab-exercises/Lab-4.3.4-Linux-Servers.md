@@ -132,21 +132,3 @@ grabbing, which can be used to research known CVE vulnerabilities, is a critical
 security risk.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[3-4 sentences connecting the lab to real SOC 
-analyst or penetration tester work]
