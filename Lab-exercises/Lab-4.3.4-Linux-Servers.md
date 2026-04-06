@@ -30,8 +30,8 @@ For an analyst to display all the available processes, elevated privileges are
 required, so the use of `sudo` is needed to execute a command as root.
 
 
-![ps -elf output](../
-![ps -ejH output](../
+![ps -elf output](../Lab-screenshots/ps-netstat-telnet/ps%20-elf.png)
+![ps -ejH output](../Lab-screenshots/ps-netstat-telnet/ps%20-ejH.png)
 
 ---
 
@@ -43,7 +43,7 @@ the Active UNIX domain sockets, which contain the communications between program
 on the same machine. Malware usually uses UNIX domain sockets to avoid generating 
 traffic and triggering alerts.
 
-![netstat output](../
+![netstat output](../Lab-screenshots/ps-netstat-telnet/netstat.png)
 
 ---
 
@@ -56,7 +56,7 @@ and `-p` to show the PID of the programs using the connection.
 Running `netstat -tunap` shows a complete map of every open port, protocol, state, and Program name.
 This is one of the first commands for an analyst to execute when investigating an incident.
 
-![netstat -tunap output](../
+![netstat -tunap output](../Lab-screenshots/ps-netstat-telnet/netstat%20-tunap.png)
 
 ---
 
@@ -72,7 +72,7 @@ implement a security measure called privilege separation by running the parent
 process on root privileges and the child processes that, in our case, handle web
 requests with lower privileges for security purposes.
 
-![ps grep nginx output](../
+![ps grep nginx output](../Lab-screenshots/ps-netstat-telnet/grep.png)
 
 ---
 
@@ -90,7 +90,7 @@ also displaying as plain text the server's version, which an attacker can use to
 search for CVE known vulnerabilities for the specific server version. Trying to 
 locate service information and version as an attacker is called banner grabbing.
 
-![telnet port 80 output](../
+![telnet port 80 output](../Lab-screenshots/ps-netstat-telnet/telnet%20port%2080.png)
 
 ---
 
@@ -106,7 +106,7 @@ replace telnet as it encrypts the data transmitted through a network compared to
 text format that telnet implements.
 
 
-![telnet port 22 output](../
+![telnet port 22 output](../Lab-screenshots/ps-netstat-telnet/telnet%20port%2022.png)
 
 ---
 
@@ -118,7 +118,7 @@ be proven effective when used against TCP ports. An analyst should know which to
 to use based on the protocol: telnet for TCP ports and netcat for UDP ports.
 
 
-![telnet port 68 output](../
+![telnet port 68 output](../Lab-screenshots/ps-netstat-telnet/telnet%20port%2068.png)
 
 ---
 
