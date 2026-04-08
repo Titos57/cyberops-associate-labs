@@ -46,14 +46,25 @@ critical services and unusual network interface state changes.
 ## Part 2: Locating Log Files in Unknown Systems
 
 ### Step 1: Reading Documentation with man nginx
+Finding logs in an unknown environment for a specific service
+can be done by searching its `man` page. Locating the files 
+section reveals the log file location, the pid file, and 
+the configuration file of the specific service. It is 
+critical for an analyst who encounters an unfamiliar service 
+to use its `man` page to locate the log file's position in the system.
 
-
+![man nginx](../
 
 ---
 
 ### Step 2: Verifying nginx is Running
-
-
+Executing the command `ps ax` lists all the processes running on the machine
+and by using the pipe character with the `grep` command, filtering the output for 
+a specific service. Using this method to search for the 
+nginx process, three processes are revealed: the process PID, one master process, and two
+worker processes handling web requests. Confirming a service is active before
+examining its logs ensures the analyst is working with current data rather 
+than stale entries from a previously terminated process.
 
 
 
