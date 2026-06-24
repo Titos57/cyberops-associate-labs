@@ -99,6 +99,8 @@ information of the network structure to an attacker is by focusing on minimizing
 information as shown by Cisco and Afrinic is by setting up the firewall to block ICMP responses. As a SOC analyst, much of such reconnaissance is frequently observed, emphasizing the 
 importance of having a router baseline documentation to be able to spot any inconsistencies like traffic hijacking.
 
+---
+
 ### References
 
 - MITRE ATT&CK — T1590: Gather Victim Network Information  
