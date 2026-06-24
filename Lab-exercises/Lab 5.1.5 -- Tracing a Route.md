@@ -103,6 +103,8 @@ importance of having a router baseline documentation to be able to spot any inco
 
 ### References
 
+- GSuite Tools — Visual Traceroute  
+  https://gsuite.tools/traceroute
 - MITRE ATT&CK — T1590: Gather Victim Network Information  
   https://attack.mitre.org/techniques/T1590/
 
