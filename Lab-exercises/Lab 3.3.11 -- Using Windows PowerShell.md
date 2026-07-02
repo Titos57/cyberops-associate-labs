@@ -52,6 +52,8 @@ Executing the `dir` command without any flags on both PowerShell and Command Pro
 directories. However, Command Prompt reveals two additional entries, `.` and `..`, representing the current and parent directories that PowerShell did not.
 Other commands like `ping`, `cd` and `ipconfig` respond identically in both.
 
+![dir command](../Lab-screenshots/PowerShell/dir%20comparison%20.png)
+
 ### Part 3 — Exploring Cmdlets
 
 PowerShell applies aliases to widely known and used commands to make the transition
@@ -60,23 +62,32 @@ shows the command that `dir` actually relates to in PowerShell's cmdlet `Get-Chi
 PowerShell uses a verb to describe the action and a noun to represent the exact target 
 of the action.
 
+![Get alias dir command](../Lab-screenshots/PowerShell/Get-Alias%20dir%20command.png)
+
 ### Part 4 — Exploring Netstat Using PowerShell
 
-[What netstat -r revealed about the routing table and IPv4 
-gateway. What netstat -abno showed about active TCP connections 
-and associated processes. How a specific PID was correlated to 
-a process in Task Manager. Why elevated privileges were required 
-for the -b flag.]
+Before using the `netstat` command, check the available flags to
+maximize information gained by executing the `netstat -h` command. Running the `netstat -r` command 
+produces a routing table of the local machine's IP and IPv4 Gateway (192.168.1.1) among other
+useful information. However, in some cases launching PowerShell as administrator is required 
+before executing `netstat` commands. For example, the `netstat -abno` command requires administrator
+access to execute, as it provides all the UDP and TCP active connections on the machine. 
+Investigating the process with PID 10384 through Task Manager reveals the svchost.exe process.
+Accessing the properties page of svchost.exe reveals more details such as the executable path, the 
+process description and the version, amongst others.
 
-*Screenshot: `04-netstat-abno.png`*
-*Screenshot: `05-pid-task-manager.png`*
+![netstat -h command](../Lab-screenshots/PowerShell/netstat%20-h.png)
+![netstat -r command](../Lab-screenshots/PowerShell/netstat%20-r.png)
+![netstat -abno command](../Lab-screenshots/PowerShell/netstat%20-abno.png)
+![PID Task Manager -r command](../Lab-screenshots/PowerShell/PID%20task%20manager.png)
 
 ### Part 5 — Emptying the Recycle Bin Using PowerShell
 
-[What the clear-recyclebin cmdlet demonstrated about PowerShell 
-automating tasks that would otherwise require GUI interaction.]
+A simple command following the verb-noun type that was mentioned is
+`clear-recyclebin`, which clears the contents inside the machines
+recycle bin.
 
-*Screenshot: `06-clear-recyclebin.png`*
+![recyclebin command](../Lab-screenshots/PowerShell/recycle%20bin%20cleanup%20command.png)
 
 ---
 
