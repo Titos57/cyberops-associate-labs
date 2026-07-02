@@ -41,25 +41,24 @@ Reference relevant frameworks or principles where appropriate.]
 
 ### Part 1 — Accessing PowerShell
 
-[How PowerShell was launched alongside Command Prompt. 
-One short paragraph.]
-
-*Screenshot: `01-powershell-and-cmd.png`*
+Launching both PowerShell and Command Prompt side by side reveals one immediate difference. 
+PowerShell prefixes the prompt with `PS` before the path location, while Command Prompt displays
+the path alone. Testing commands against both of them at the same time can reveal the capabilities
+that each one offers.
 
 ### Part 2 — Command Prompt and PowerShell Commands
 
-[What commands were run in both shells. What the comparison 
-revealed about compatibility between the two environments.]
-
-*Screenshot: `02-dir-comparison.png`*
+Executing the `dir` command without any flags on both PowerShell and Command Prompt produced identical outputs of 13
+directories. However, Command Prompt reveals two additional entries, `.` and `..`, representing the current and parent directories that PowerShell did not.
+Other commands like `ping`, `cd` and `ipconfig` respond identically in both.
 
 ### Part 3 — Exploring Cmdlets
 
-[What Get-Alias dir revealed about how PowerShell aliases 
-traditional commands to its own cmdlet structure. What the 
-verb-noun cmdlet naming convention means in practice.]
-
-*Screenshot: `03-get-alias-dir.png`*
+PowerShell applies aliases to widely known and used commands to make the transition
+easier. An example of such aliases is the `dir` command, executing `Get-Alias dir`
+shows the command that `dir` actually relates to in PowerShell's cmdlet `Get-ChildItem`.
+PowerShell uses a verb to describe the action and a noun to represent the exact target 
+of the action.
 
 ### Part 4 — Exploring Netstat Using PowerShell
 
