@@ -39,11 +39,11 @@ Before launching Wireshark and capturing traffic, the virtual network is initial
 
 ### Part 2 — Local LAN Capture (H1 to H2)
 
-[Condensed summary: starting Wireshark on H1-eth0, running `ping -c 5 10.0.0.12`, applying the icmp filter, and examining the Ethernet II source/destination MAC addresses against recorded values.]
+Capturing traffic between H1 and H2 begins with launching Wireshark using the `wireshark &` command and selecting the H1-eth0 interface. The `ping -c 5 10.0.0.12` command is then executed to send five ICMP echo requests to H2. Wireshark captured a range of traffic, since the ping command generates ICMP protocol messages. By applying `icmp` in the Filter field, the ping requests and replies are isolated for examination. For the ping request frame, the Ethernet II section in the middle panel confirms a source MAC address of `86:29:54:5c:57:b0` and a destination MAC address of `62:a4:02:f3:f7:2a`, matching the addresses previously recorded for H1-eth0 and H2-eth0.
 
 ### Part 3 — Remote LAN Capture (H1 to H4)
 
-[Condensed summary: recording H4-eth0, R1-eth1, and R1-eth2 addresses, starting a new capture on H1, running `ping -c 5 172.16.0.40`, and examining the destination IP/MAC addresses returned in the capture.]
+
 
 ---
 
