@@ -2,8 +2,9 @@
 
 > **Course:** Cisco CyberOps Associate 
 **Module:** 5 — Network Protocols 
-**Platform:** CyberOps Workstation VM (Arch Linux, Mininet) 
-**Lab Type:** Hands-On **Completed:** [Month Year] 
+**Platform:** CyberOps Workstation VM
+**Lab Type:** Hands-On
+**Completed:** June 2026
 **Author:** Christos Panopoulos — University of Peloponnese, CS & Telecommunications
 
 ---
@@ -34,7 +35,7 @@
 
 ### Part 1 — Mininet Topology Setup
 
-[Condensed summary: running the cyberops_topo.py script, verifying the topology (R1, S1, H1–H4), and recording IP/MAC addresses for H1-eth0 and H2-eth0 from actual `ip address` output.]
+Before launching Wireshark and capturing traffic, the virtual network is initialized by running the `cyberops_topo.py` script, which configures four hosts, a switch, and a router. A terminal is opened on H1 using `xterm H1`, and on H2 using `xterm H2`. Running `ip address` in each terminal returns the IPv4 and MAC address of the corresponding interface, a step required to correlate captured frames back to the originating and receiving host. H1-eth0 is configured with an IPv4 address of `10.0.0.11/24` and a MAC address of `86:29:54:5c:57:b0`. H2-eth0 is configured with an IPv4 address of `10.0.0.12/24` and a MAC address of `62:a4:02:f3:f7:2a`.
 
 ### Part 2 — Local LAN Capture (H1 to H2)
 
