@@ -12,17 +12,11 @@ CS & Telecommunications
 
 ## Overview
 
-[2–3 sentences. Written last. What the lab covers, what tools were 
-used, and why it matters to security. Never start with "In this 
-lab..."]
-
----
-
-## Background
-
-[1–2 paragraphs. The security concept this lab demonstrates. Why it 
-matters to defenders and attackers. No copying from Cisco text. 
-Reference relevant frameworks or principles where appropriate.]
+PowerShell is a Windows system environment responsible for investigation,
+scripting for automation while offering compatibility with other environments
+through its alias layer. Running `netstat -abno` can provide meaningful
+information about the processes running on a Windows system by correlating the PID
+to a process on Task Manager.
 
 ---
 
@@ -30,10 +24,8 @@ Reference relevant frameworks or principles where appropriate.]
 
 | Component          | Details |
 |--------------------|---------|
-| Operating System   |         |
-| Primary Tool(s)    |         |
-| Supporting Tool(s) |         |
-| Key Concepts       |         |
+| Operating System   | Windows 10 Home |
+| Primary Tool(s)    | PowerShell |
 
 ---
 
@@ -93,14 +85,17 @@ recycle bin.
 
 ## Key Findings
 
-[3–5 sentences. Specific observations from your actual output — 
-your IPv4 gateway, the PID you selected and what process it 
-mapped to, what the alias revealed, what the routing table 
-showed. No vague statements.]
+PowerShell commands follow a format of verb-noun  to specify the action and the target accordingly. However, to maintain compatibility with familiar commands from other environments, it integrates aliases for commands like dir. Executing the `netstat -r` command provides a routing table with information about 
+the IPv4 Gateway IP(192.168.1.1)and the local machine's IP. Information about the processes running in the background of a Windows machine can be examined by executing
+the `netstat -abno` command with elevated privileges, which provides PID numbers that can be observed through the Task Manager for process information and description, like PID 10384 which
+points to a Windows Host Service named `svchost.exe`.
 
 ---
 
 ## References
 
 - Cisco NetAcad — CyberOps Associate, Lab 3.3.11: 
-  Using Windows PowerShell
+  Using Windows PowerShel
+
+
+
