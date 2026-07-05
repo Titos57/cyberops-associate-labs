@@ -1,23 +1,23 @@
 # Lab 5.3.7 -- Introduction to Wireshark
 
 > **Course:** Cisco CyberOps Associate 
-**Module:** 5 — Network Protocols 
-**Platform:** CyberOps Workstation VM
-**Lab Type:** Hands-On
-**Completed:** June 2026
-**Author:** Christos Panopoulos — University of Peloponnese, CS & Telecommunications
+> **Module:** 5 — Network Protocols 
+> **Platform:** CyberOps Workstation VM
+> **Lab Type:** Hands-On
+> **Completed:** June 2026
+> **Author:** Christos Panopoulos — University of Peloponnese, CS & Telecommunications
 
 ---
 
 ## Overview
 
-[Written last]
+ICMP traffic was captured and analyzed using Wireshark within a Mininet-simulated topology, comparing packet behavior between two hosts on the same local subnet and between a local host and a remote host reached through a router. Hosts on the same subnet communicate directly with each other, as the source and destination MAC addresses correspond to the two communicating hosts. Hosts on remote subnets communicate through a router, with the destination MAC address changing at every hop while the IP address remains the same throughout the exchange. This lab demonstrates how MAC values change hop-by-hop while IP addresses remain intact.
 
 ---
 
 ## Background
 
-[Explain what Wireshark is and its role as a packet analyzer for network troubleshooting and security analysis, and briefly introduce the Mininet-simulated topology (R1, S1, H1–H4) used to generate traffic for capture.]
+Wireshark is a protocol analyzer used by security professionals to capture, decode, and examine traffic moving through a network interface, supporting network troubleshooting, protocol analysis, and traffic-based investigation. This lab uses a Mininet-simulated topology consisting of four hosts (H1–H4), a switch (S1), and a router (R1), configured across two subnets, to generate controlled ICMP traffic for capture and analysis. Examining this traffic demonstrates how data is encapsulated within Ethernet and IP headers, and how that encapsulation changes as traffic crosses from a local subnet to a remote one through a router.
 
 ---
 
@@ -25,9 +25,9 @@
 
 | Component        | Details                                      |
 | ----------------- | --------------------------------------------- |
-| Operating System  | CyberOps Workstation VM (Arch Linux, hostname secOps) |
-| Primary Tool(s)   | Mininet, Wireshark, ping                      |
-| Key Concepts      | Packet encapsulation, ICMP, ARP, MAC/IP addressing |
+| Operating System  | CyberOps Workstation VM |
+| Primary Tool(s)   | Mininet, Wireshark, ping |
+| Key Concepts      | Packet encapsulation, ICMP, MAC/IP addressing |
 
 ---
 
@@ -43,13 +43,13 @@ Capturing traffic between H1 and H2 begins with launching Wireshark using the `w
 
 ### Part 3 — Remote LAN Capture (H1 to H4)
 
-
+Communicating with a remote host requires an additional step, since traffic must pass through a router when the source and destination reside on different subnets. R1-eth1 is configured with an IPv4 address of `10.0.0.1/24`, serving as the default gateway for the `10.0.0.0/24` subnet containing H1 and H2, and a MAC address of `c6:c4:76:dd:1f:03`. R1-eth2 is configured with an IPv4 address of `172.16.0.1/12`, serving as the default gateway for the `172.16.0.0/12` subnet containing H4, and a MAC address of `56:83:fe:51:22:a2`. H4 is configured with an IPv4 address of `172.16.0.40/12` and a MAC address of `2e:73:af:d6:b8:ef`. Launching Wireshark from the H1 terminal and executing `ping -c 5 172.16.0.40` generates ICMP echo request and reply messages captured by Wireshark. Examining the captured frame, the destination MAC address matches R1-eth1 `(c6:c4:76:dd:1f:03)` rather than H4's own MAC address, while the destination IP address in the IP header still shows `172.16.0.40`, confirming that H1 forwards the frame to the router as the next hop while the packet's ultimate destination remains H4.
 
 ---
 
 ## Key Findings
 
-[Must include, using actual recorded values: whether the local-LAN capture confirmed source/destination MAC addresses matching H1 and H2 directly; and the key finding from the remote-LAN capture — that the destination MAC address resolved to R1-eth1 rather than H4's own MAC address, since ARP resolves the default gateway for traffic destined off-subnet, with the IP header still carrying H4's address end-to-end.]
+On a local subnet, captured frames contain the source and destination MAC addresses of the two hosts directly, since the two hosts share the same subnet. However, when communicating with a remote subnet the destination MAC address corresponds to the router's interface(`c6:c4:76:dd:1f:03`) rather than the H4(`2e:73:af:d6:b8:ef`) host, which is the destination. On remote communications, MAC addresses change from hop to hop, while IP addresses stay the same throughout.
 
 ---
 
