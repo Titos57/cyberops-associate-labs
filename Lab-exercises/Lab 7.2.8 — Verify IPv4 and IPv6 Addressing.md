@@ -32,6 +32,9 @@ Sending ICMP messages with `tracert` from both hosts revealed the same IP addres
 finally reaching PC1 at `10.10.1.100`. By tracing with IPv6 addresses this time, the result follows the same path starting from `2001:DB8:1:4::1`(R3), then `2001:DB8:1:3::1`(R2), the third hop is `2001:DB8:1:2::2`(R1)
 and the final hop is PC1 with `2001:DB8:1:1::A` IPv6 address.
 
+![ipconfig + ping](./Lab-screenshots/Packet%20Tracer/ipconfig%20%2B%20ping.png)
+![IPv4 tracert](./Lab-screenshots/Packet%20Tracer/IPv4%20tracert.png)
+
 ---
 
 ## References
