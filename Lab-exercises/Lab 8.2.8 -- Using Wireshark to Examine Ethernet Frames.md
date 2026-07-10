@@ -57,12 +57,6 @@ the same as that of the default gateway (`ca:fd:1b:5f:ea:3e`). This occurred bec
 
 ---
 
-## Reflection (Optional)
-
-*(What the preamble contains and why Wireshark doesn't display it; any personal takeaway on frame-level analysis relevance to SOC work)*
-
----
-
 ## References
 
 - Cisco Networking Academy, *CyberOps Associate v1.0/1.1 — Lab: Using Wireshark to Examine Ethernet Frames*
