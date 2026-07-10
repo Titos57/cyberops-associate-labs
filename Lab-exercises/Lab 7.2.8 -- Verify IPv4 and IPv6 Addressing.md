@@ -1,4 +1,4 @@
-# Lab 7.2.8 — Verify IPv4 and IPv6 Addressing
+# Lab 7.2.8 -- Verify IPv4 and IPv6 Addressing
 
 >**Author:** Christos Panopoulos
 >**Course:** Cisco CyberOps Associate
