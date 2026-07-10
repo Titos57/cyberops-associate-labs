@@ -6,21 +6,24 @@
 ---
 
 ## Overview
-*(Written last — high-level summary of what was done and what it demonstrates)*
+
+A simulated network with one router, one switch and four hosts is utilized to capture and analyze Ethernet II frame headers, focusing on Layer 2 and Layer 3 addressing behavior.
+On the provided network, H3 used the ping command to send ICMP messages to the default gateway and to a remote host on another subnet. Analysis of the traffic produced by the ping command on the remote host revealed that Layer 2 (MAC address) addressing is adjusted hop-by-hop, while Layer 3 (IP address) persists through the whole path to the destination. Understanding Ethernet II fields and behavior based on different destination targets provides insight into addressing that reinforces the theoretical knowledge.
 
 ---
 
 ## Background
 
-The Ethernet II frame is the Layer 2 encapsulation structure used to deliver data across a local network, and includes the source and destination MAC addresses, the preamble responsible for letting the receiving hardware detect the start of the frame, the FCS that makes sure there are no errors during transmission, as well as the frame type and the data field that includes the payload. ARP protocol is commonly used by the source device to associate an IP address with the MAC address of the destination device. On a local network, the frame's source and destination MAC addresses directly represent the two communicating hosts. While communicating to a remote network, layer 2 addressing changes on each hop.
+The Ethernet II frame is the Layer 2 encapsulation structure used to deliver data across a local network, and includes the source and destination MAC addresses, the preamble responsible for letting the receiving hardware detect the start of the frame, the FCS that makes sure there are no errors during transmission, as well as the frame type and the data field that includes the payload. ARP protocol is commonly used by the source device to associate an IP address with the MAC address of the destination device. Layer 2 (MAC address) addressing is only valid within a single network segment, while Layer 3 (IP address) persists throughout the whole path to the destination.
+As a SOC analyst, understanding the roles of Layer 2 and Layer 3 is essential to detect and flag unusual behavior like ARP spoofing.
 
 ---
 
 ## Environment & Tools
 
-*(VM details, Wireshark version if visible, Mininet topology diagram/description, host IPs/MACs recorded from `ip address` and `netstat -r`)*
-
-[Screenshot: H3 `ip address` and `netstat -r` output]
+-CyberOps Workstation VM
+-Wireshark — used to capture and inspect Ethernet II frame headers
+-Simulated Topology(Mininet -- R1 router, S1 switch, H1, H2, H3, H4)
 
 ---
 
@@ -37,11 +40,9 @@ A new Wireshark capture was started on the same interface, targeting a host on a
 to H4 with `ping -c 5 172.16.0.40`. The source MAC address of H3 (`66:48:45:f4:c0:12`) remained the same as expected and the destination MAC address remained 
 the same as that of the default gateway (`ca:fd:1b:5f:ea:3e`). This occurred because H3 is on a different network from H4 and the requests are sent to the default gateway to handle routing.
 
-[Screenshot: ARP cache clear — `arp -n` before/after `arp -d`]
-[Screenshot: Wireshark capture filtered on icmp — local ping to gateway]
-[Screenshot: Ethernet II frame details pane — local ping]
-[Screenshot: Wireshark capture — ping to H4 (routed)]
-[Screenshot: Ethernet II frame details pane — routed ping]
+![ip address - netstat -r H3](../Lab-screenshots/Wireshark/ip%20address%20%2B%20netstat%20-r.png)
+![Wireshark H3 to router](../Lab-screenshots/Wireshark/Wireshark%20H3%20to%20router.png)
+![Wireshark H3 to H4](../Lab-screenshots/Wireshark/Wireshark%20H3%20to%20H4.png)
 
 ---
 
@@ -67,7 +68,8 @@ Knowledge of how traffic is routed through a network (MAC address hop-by-hop, IP
 
 ---
 
-## References
+## Rerences
 
+-Cyberops Associate Course - 8.2.8 Using Wireshark to Examine Ethernet Frames
 - Cisco Networking Academy, *CyberOps Associate v1.0/1.1 — Lab: Using Wireshark to Examine Ethernet Frames*
 - Wireshark documentation (if cited)
