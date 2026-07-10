@@ -12,7 +12,7 @@
 
 ## Background
 
-
+The Ethernet II frame is the Layer 2 encapsulation structure used to deliver data across a local network, and includes the source and destination MAC addresses, the preamble responsible for letting the receiving hardware detect the start of the frame, the FCS that makes sure there are no errors during transmission, as well as the frame type and the data field that includes the payload. ARP protocol is commonly used by the source device to associate an IP address with the MAC address of the destination device. On a local network, the frame's source and destination MAC addresses directly represent the two communicating hosts. While communicating to a remote network, layer 2 addressing changes on each hop.
 
 ---
 
@@ -47,13 +47,23 @@ the same as that of the default gateway (`ca:fd:1b:5f:ea:3e`). This occurred bec
 
 ## Key Findings
 
-*(Concrete values only — actual MAC addresses, OUI values, frame types (0x0800 / 0x0806), IP addresses recorded from both captures. State explicitly: destination MAC stayed the same/changed between local and routed ping while destination IP changed — with the real recorded values.)*
+Inspecting the Packet Details pane on Wireshark can provide unique insight. The Ethernet II section of the Packet Details pane displays the destination, source, and frame type fields. The Frame type on ICMP messages is 0x0800, confirming IPv4 encapsulation. However, in the case of ARP messages, this code would be 0x0806, indicating ARP traffic. Vendor identification is also possible from looking up the first 6 hex digits of any host MAC address, providing information about the device sending or receiving the traffic.
+
+When H3 pinged its default gateway (same subnet, 10.0.0.0/24), the frame's source and destination MAC addresses directly represented the two communicating hosts. However, on remote hosts that is not the case. When H3 pinged H4, the destination IP address changed to H4's IP address, but the destination MAC address remained as the gateway's. As observed from H3's perspective, layer 2 addressing (MAC address) is hop-by-hop, while layer 3 addressing (IP address) remains the same end-to-end.
+
+Before constructing the frame of a packet, the source device checks its ARP table for the MAC address of the IP address the packet is meant to be sent to. If the ARP table does not contain the MAC address of the specific IP, the ARP protocol sends an ARP request to all devices to locate the MAC address of the IP. After a reply is received with the MAC address, the frame is fully constructed and sent. 
 
 ---
 
 ## Security Implications
 
-*(Connect to real concepts: why ARP resolution matters for on-path attacks/ARP spoofing, why MAC addresses don't traverse routers (relevant to network segmentation and lateral movement detection), relevance of frame-level visibility to SOC packet analysis/IDS. MITRE ATT&CK: T1040 – Network Sniffing, and optionally T1557 – Adversary-in-the-Middle if you want to extend into ARP spoofing implications.)*
+Whenever a device does not have the MAC address of the device trying to communicate, it sends an ARP request. ARP requests do not contain any authentication process. As a result, an attacker could send ARP replies to intercept future traffic. This process is called ARP spoofing and corresponds to MITRE ATT&CK sub-technique T1557.002 (ARP Cache Poisoning).
+
+By inspecting traffic on Wireshark, an analyst can detect a MAC address vendor that does not match the expected vendor for a device, therefore providing an opportunity to flag the device for further investigation. This technique can be used by attackers as well, providing an attacker with MAC/IP mapping of the network or even intercepting unencrypted traffic. This is called Network Sniffing, referred to in MITRE ATT&CK under T1040.
+
+Vendor identification via the MAC OUI, such as H3's OUI (`66:48:45`), which identifies the NIC vendor, can support rogue device detection by flagging a MAC address whose vendor does not match expected devices on the network.
+
+Knowledge of how traffic is routed through a network (MAC address hop-by-hop, IP address static end-to-end) is essential to accurately track the steps an attacker took and what devices routed the specific traffic.
 
 ---
 
