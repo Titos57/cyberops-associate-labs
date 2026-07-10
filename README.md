@@ -33,8 +33,8 @@ Labs in this repository are documented at one of three tiers, chosen based on th
 | 3.3.10 | [Create User Accounts](./Lab-exercises/Lab%203.3.10%20--%20Create%20User%20Accounts.md) | 1 | Windows user account management, Command Prompt administration |
 | 3.3.11 | [Using Windows PowerShell](./Lab-exercises/Lab%203.3.11%20--%20Using%20Windows%20PowerShell.md) | 2 | Windows PowerShell, Task Manager |
 | 4.2.6 | [Working with Text Files in the CLI](./Lab-exercises/Lab%204.2.6%20--%20Working%20with%20Text%20Files%20in%20the%20CLI.md) | 2 | Linux CLI, text editors, configuration files, nginx, bash |
-| 4.2.7 | [Getting Familiar with the Linux Shell](./Lab-exercises/Lab-4.2.7--Getting-Familiar-with-the-Linux-Shell.md) | 2 | Linux CLI, shell navigation, file management, output redirection, hidden files, forensic awareness |
-| 4.3.4 | [Linux Servers](./Lab-exercises/Lab-4.3.4--Linux-Servers.md) | 1 | Linux processes, ps, netstat, Telnet, banner grabbing, service fingerprinting, privilege separation |
+| 4.2.7 | [Getting Familiar with the Linux Shell](.Lab-exercises/Lab%204.2.7%20--%20Getting-Familiar-with-the-Linux-Shell.md) | 2 | Linux CLI, shell navigation, file management, output redirection, hidden files, forensic awareness |
+| 4.3.4 | [Linux Servers](./Lab-exercises/Lab%204.3.4%20--%20Linux-Servers.md) | 1 | Linux processes, ps, netstat, Telnet, banner grabbing, service fingerprinting, privilege separation |
 | 5.1.5 | [Tracing a Route](./Lab-exercises/Lab%205.1.5%20--%20Tracing%20a%20Route.md) | 2 | Traceroute, path analysis, network diagnostics |
 | 5.3.7 | [Introduction to Wireshark](./Lab-exercises/Lab%205.3.7%20--%20Introduction%20to%20Wireshark.md) | 1 | Wireshark, ping, Packet encapsulation, ICMP, MAC/IP addresses |
 | 7.2.8 | [Verify IPv4 and IPv6 Addressing](./Lab-exercises/Lab%207.2.8%20--%20Verify%20IPv4%20and%20IPv6%20Addressing.md) | 3 | Packet Tracer, ipconfig /all, Traceroute, dual-stack IPv4 Ipv6 |
