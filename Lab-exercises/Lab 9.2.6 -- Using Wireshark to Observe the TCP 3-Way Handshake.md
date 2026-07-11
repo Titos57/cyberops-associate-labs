@@ -34,9 +34,9 @@ Expanding the Transmission Control Protocol pane on the first SYN message from c
 The SYN flag is set to 1, indicating the start of the connection and the sequence number is set to 0. The second frame sent by the server contains the SYN-ACK flags set to 1, with the destination and source port reversed and a sequence number of 0, while the acknowledgement number is 1. The final ACK flag is sent by the client with the sequence number incrementing to 1 and the acknowledgement number remaining at 1. 
 Tcpdump was also used to inspect the traffic. An interesting distinction between Wireshark and tcpdump is that tcpdump represents the SYN flag as S and the ACK flag as a period (.).
 
-![Firefox traffic generating](./Lab-screenshots/Wireshark/Firefox%20.png)
-![Wireshark analysis](./Lab-screenshots/Wireshark/Wireshark%20analysis.png)
-![Tcpdump analysis](./Lab-screenshots/Wireshark/tcpdump%20analysis.png)
+![Firefox traffic generating](../Lab-screenshots/Wireshark/Firefox%20.png)
+![Wireshark analysis](../Lab-screenshots/Wireshark/Wireshark%20analysis.png)
+![Tcpdump analysis](../Lab-screenshots/Wireshark/tcpdump%20analysis.png)
 
 ---
 
