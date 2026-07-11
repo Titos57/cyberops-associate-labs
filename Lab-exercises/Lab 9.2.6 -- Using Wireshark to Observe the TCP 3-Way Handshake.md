@@ -41,9 +41,9 @@ Tcpdump was also used to inspect the traffic. An interesting distinction between
 Wireshark and tcpdump, despite having different representations of data present the same handshake, demonstrating that on a packet-level, results remain tool-independent.
 
 The underlying handshake follows a strict format of flags and sequences. The SYN->SYN-ACK->ACK progression where each frame is set as:
--Frame 1 (SYN): seq=0
--Frame 2 (SYN-ACK): seq=0, ack=1
--Frame 3 (ACK): seq=1, ack=1
+- Frame 1 (SYN): seq=0
+- Frame 2 (SYN-ACK): seq=0, ack=1
+- Frame 3 (ACK): seq=1, ack=1
 
 The Source Port 51542 is dynamically chosen from a range (49152-65535) of ports before a client attempts to communicate with a server, where the port number of the server is based on the service running on it. In this case, the HTTP service is listening on port number 80.
 
