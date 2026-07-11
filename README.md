@@ -39,6 +39,7 @@ Labs in this repository are documented at one of three tiers, chosen based on th
 | 5.3.7 | [Introduction to Wireshark](./Lab-exercises/Lab%205.3.7%20--%20Introduction%20to%20Wireshark.md) | 1 | Wireshark, ping, Packet encapsulation, ICMP, MAC/IP addresses |
 | 7.2.8 | [Verify IPv4 and IPv6 Addressing](./Lab-exercises/Lab%207.2.8%20--%20Verify%20IPv4%20and%20IPv6%20Addressing.md) | 3 | Packet Tracer, ipconfig /all, Traceroute, dual-stack IPv4 Ipv6 |
 | 8.2.8 | [Using Wireshark to Examine Ethernet Frames](./Lab-exercises/Lab%208.2.8%20--%20Using%20Wireshark%20to%20Examine%20Ethernet%20Frames.md) | 1 | Ethernet II frame structure, Wireshark packet capture, ARP, Layer 2 vs Layer 3 addressing |
+| 9.2.6 | [Using Wireshark to Observe the TCP 3-Way Handshake](./Lab-exercises/Lab%209.2.6%20--%20Using%20Wireshark%20to%20Observe%20the%20TCP%203-Way%20Handshake.md) | 2 | TCP Handshake, Tcpdump, Wireshark, Packet Analysis |
   
 ---
  
