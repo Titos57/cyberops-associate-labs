@@ -27,6 +27,11 @@ a valuable tool for defenders to perform authorized scans in order to identify u
 
 Learning about the purpose of Nmap can be done by executing the `man nmap` command in a terminal. The command returns information from its purpose, network exploration, to examples like `nmap -A -T4`, where `-A` is a flag enabling OS detection, version detection, script scanning and traceroute, combined with `-T4` to speed up scan execution. The first scan was performed on localhost, revealing three open ports: port 21 for FTP version 2.0.8, port 22 for SSH version 8.9, and port 23 for telnet, identified as Linux telnetd. Localhost port 21 for FTP allows anonymous FTP login, raising security concerns. Running the ip address command revealed the VM's IP address (10.0.2.15/24), and zeroing the last octet produced the network address 10.0.2.0/24, which was then used to scan the subnet. The scan performed to `10.0.2.0/24` displayed the same three open ports from localhost (`10.0.2.15`) as well as one more port from the default gateway (`10.0.2.2`) running on the network with an open port 631 for IPP version CUPS 2.4. Lastly, a scan was run on a remote host named scanme.nmap.org, revealing one host up and running on Linux with eight open ports and a filtered one. 
 
+![nmap localhost](../Lab-screenshots/Nmap/nmap%20localhost.png)
+![nmap local network](../Lab-screenshots/Nmap/nmap%20local%20network.png)
+![nmap external host](../Lab-screenshots/Nmap/nmap%20external%20host.png)
+
+
 ---
 
 ## Key Findings
