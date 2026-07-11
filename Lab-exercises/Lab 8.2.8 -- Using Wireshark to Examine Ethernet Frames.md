@@ -70,6 +70,4 @@ Knowledge of how traffic is routed through a network (MAC address hop-by-hop, IP
 
 ## References
 
--Cyberops Associate Course - 8.2.8 Using Wireshark to Examine Ethernet Frames
-- Cisco Networking Academy, *CyberOps Associate v1.0/1.1 — Lab: Using Wireshark to Examine Ethernet Frames*
-- Wireshark documentation (if cited)
+- Cyberops Associate Course - 8.2.8 Using Wireshark to Examine Ethernet Frames
