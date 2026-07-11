@@ -17,7 +17,7 @@ a valuable tool for defenders to perform authorized scans in order to identify u
 
 | Component       | Details |
 |-----------------|---------|
-| Operating System | CyberOps Workstation VM (Arch Linux), hostname: secOps |
+| Operating System | CyberOps Workstation VM (Arch Linux) |
 | Primary Tool(s) | Nmap 7.80 (flags: -A, -T4) |
 | Networking Details | VM IP (10.0.2.15), local network (10.0.2.0/24), external host (scanme.nmap.org), default gateway (10.0.2.2) |
 
@@ -30,7 +30,10 @@ Learning about the purpose of Nmap can be done by executing the `man nmap` comma
 ---
 
 ## Key Findings
-*(Concrete, value-based observations — e.g., specific ports, services, and versions identified on each target; hosts discovered on the LAN; open vs. filtered port differences between local and remote scans.)*
+
+
+
+---
 
 ## Security Implications
 *(Analysis of what the findings mean from a defensive and offensive perspective — dual-use nature of the tool, exposure risks from findings like anonymous FTP or Telnet if present, and reference to MITRE ATT&CK T1046 — Network Service Discovery, plus T1590 — Gather Victim Network Information if relevant to the remote scan step.)*
