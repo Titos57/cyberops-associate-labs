@@ -51,4 +51,4 @@ The Source Port 51542 is dynamically chosen from a range (49152-65535) of ports 
 
 ## References
 
--CyberOps Associate, Using Wireshark to Observe the TCP 3-Way Handshake Using Wireshark to Observe the TCP 3-Way Handshake
+- CyberOps Associate, Using Wireshark to Observe the TCP 3-Way Handshake Using Wireshark to Observe the TCP 3-Way Handshake
